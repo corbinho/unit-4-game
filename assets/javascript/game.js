@@ -1,4 +1,7 @@
 $(document).ready(function(){
+var music = new Audio ("band.mp3")
+music.loop = true;
+music.play()
 $("#attack").hide()
 $("#fight-stats").hide()
 var player  = {
@@ -30,6 +33,7 @@ defensePower:40
 
 var vader = {
 name: "Darth Vader",
+id: "vader",
 health: 200,
 attackPower: 90,
 defensePower: 65
@@ -38,6 +42,7 @@ defensePower: 65
 
 var darthMaul  = {
 name: "Darth Maul",
+id: "maul",
 health: 170,
 attackPower: 75,
 defensePower:50
@@ -46,6 +51,7 @@ defensePower:50
 
 var genGrevious  = {
 name: "General Grevious",
+id: "grevious",
 health: 185,
 attackPower: 75,
 defensePower: 55
@@ -54,6 +60,7 @@ defensePower: 55
 
 var luke  = {
 name: "Luke Skywalker",
+id: "luke",
 health: 200,
 attackPower: 85,
 defensePower: 60
@@ -62,6 +69,7 @@ defensePower: 60
 
 var chewie  = {
 name: "Chewbacca",
+id: "chewie",
 health: 190,
 attackPower: 55,
 defensePower: 60
@@ -70,6 +78,7 @@ defensePower: 60
 
 var obi  = {
 name: "Obi-Wan",
+id: "obi",
 health: 185,
 attackPower: 75,
 defensePower: 75
@@ -78,6 +87,7 @@ defensePower: 75
 
 var lando  = {
 name: "Lando",
+id: "lando",
 health: 150,
 attackPower: 70,
 defensePower:40
@@ -95,7 +105,10 @@ var functionShow = function(){if (enemySelected === true) {
 }
 }
 var enemySelect  = function(){
+    
     $(".boba-btn").click(function(event){
+        var newEnemy = event.currentTarget.id
+        console.log(newEnemy)
         enemyConverter(boba);
         $(".vader-card,.maul-card,.grevious-card").hide();
         enemySelected = true;
@@ -211,7 +224,7 @@ $(".boba-btn").click(function(event){
     console.log("Selected character?:" + characterSelected)
     $("#main-title").html("<h2>Now, choose your opponent</h2>")}
     // enemySelect()
-    else {z
+    else {
         enemySelect()
     }
 
@@ -322,13 +335,13 @@ var nowFighting  = function(){
             $("#user-stats").html("Name: " + player.name + "<br>" + "Health: " + player.health + "<br>" + "Attack Power: " +   player.attackPower + "<br>" + "Defense Power: " + player.defensePower)
             $("#cpu-stats").html("Name: " + enemy.name+ "<br>"+ "Health: " + enemy.health + "<br>" + "Attack Power: "  +  enemy.attackPower + "<br>" +"Defense Power: " + enemy.defensePower)
             if (enemy.health <= 0 && player.health > 0){
-                var again = confirm("Would you like to try again")
-                if (again = true){
-                    location.reload();
-                } else {
-                    $("body").hide()
+                // var again = confirm("Would you like to try again")
+                // if (again = true){
+                //     location.reload();
+                // } else {
+                //     $("body").hide()
                 enemySelected = false;
-                player.health = player.health + 100;
+                player.health = player.health + 200;
                 player.attackPower = player.attackPower * 1.8;
                 $(".card").show()
                 $(".btn").show()
@@ -336,14 +349,14 @@ var nowFighting  = function(){
                 enemySelect()
             }
             if (player.health <=0 && enemy.health >0){
-                var again = confirm("Would you like to try again")
+                var again = confirm("You lost, would you like to try again")
                 if (again = true){
                     location.reload();
                 } else {
                     $("body").hide()
                 }
             }
-        }})
+        })
         // player.health = enemy.attackPower 
         // enemy.health = player.attackPower - player.defensePower
     }}

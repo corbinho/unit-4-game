@@ -1,6 +1,4 @@
-body{
- 
-}
+
 
 img {
     width:100%
@@ -20,4 +18,8 @@ img {
 }
 .fight-stats{
     float: left;
+}
+#attack{
+    background-color: red;
+    margin-left:  20px
 }
