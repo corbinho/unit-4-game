@@ -5,3 +5,19 @@ body{
 img {
     width:100%
 }
+
+.card{
+    margin:auto;
+    display: inline;
+    float:left;
+    width: 20%;
+    margin-left: 20px;
+   
+}
+.row{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.fight-stats{
+    float: left;
+}

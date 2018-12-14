@@ -11,79 +11,111 @@
     </script>
 </head>
 <body>
-    <div id = "container" class = "justify-content-center">
-        <h2>Star Wars Game, Select a Character</h2>
-        <div class = "row justify-content-center" id = "dark-side">
-                <div class="card" style="width: 18rem;">
+    <div id = "container">
+        <h2 id = "main-title">Star Wars Game, Select a Character</h2>
+        <div class = "row" id = "dark-side">
+                <div class="card boba-card" >
                         <img class="card-img-top" src="assets/images/Boba.png" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Boba Fett</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary" id= "boba">Choose this Character</a>
+                          <p class="boba-hp">Health: 150</p>
+                          <p class="boba-ap">Attack: 60</p>
+                          <p class="boba-dp">Defense: 40</p>
+                          <a href="#" class="btn btn-primary boba-btn" id= "boba">Choose Character</a>
                         </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card vader-card" >
                         <img class="card-img-top" src="assets/images/Vader.png" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Darth Vader</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary" id = "vader">Choose this Character</a>
+                          <p class="vader-hp">Health: 200</p>
+                          <p class="vader-ap">Attack: 90</p>
+                          <p class="vader-dp">Defense: 65</p>
+                          <a href="#" class="btn btn-primary vader-btn" id = "vader" value>Choose Character </a>
                         </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card maul-card" >
                         <img class="card-img-top" src="assets/images/Darth-Maul.png" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Darth Maul</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary" id= "maul">Choose this Character</a>
+                          <p class="maul-hp">Health: 170</p>
+                          <p class="maul-ap">Attack: 75</p>
+                          <p class="maul-dp">Defense: 50</p>
+                          <a href="#" class="btn btn-primary maul-btn" id= "maul">Choose Character</a>
                         </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card grevious-card" >
                         <img class="card-img-top" src="assets/images/Grevious.png" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">General Grevious</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary" id = "grevious">Choose this Character</a>
+                          <p class="grevious-hp">Health: 185</p>
+                          <p class="grevious-ap">Attack: 75</p>
+                          <p class="grevious-dp">Defense: 55</p>
+                          <a href="#" class="btn btn-primary grevious-btn" id = "grevious">Choose Character</a>
                         </div>
                 </div>
 
         </div>
-        <div class = "row justify-content-center" id = "light-side">
-            <div class="card" style="width: 18rem;">
+        <div class = "row" id = "light-side">
+            <div class="card luke-card" >
                     <img class="card-img-top" src="assets/images/Luke.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Luke Skywalker</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary" id= "luke">Choose this Character</a>
+                          <p class="luke-hp">Health: 200</p>
+                          <p class="luke-ap">Attack: 85</p>
+                          <p class="luke-dp">Defense: 60</p>
+                        <a href="#" class="btn btn-primary luke-btn" id= "luke">Choose Character</a>
                     </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card chewie-card" >
                     <img class="card-img-top" src="assets/images/Chewie.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Chewbacca</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary" id = "chewie">Choose this Character</a>
+                          <p class="chewie-hp">Health: 190</p>
+                          <p class="chewie-ap">Attack: 55</p>
+                          <p class="chewie-dp">Defense: 60</p>
+                        <a href="#" class="btn btn-primary chewie-btn" id = "chewie">Choose Character</a>
                     </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card obi-card" >
                     <img class="card-img-top" src="assets/images/Obi-Wan.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Obi-Wan</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary" id= "obi">Choose this Character</a>
+                          <p class="obi-hp">Health: 185</p>
+                          <p class="obi-ap">Attack: 75</p>
+                          <p class="obi-dp">Defense: 75</p>
+                        <a href="#" class="btn btn-primary obi-btn" id= "obi">Choose Character</a>
                     </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card lando-card" >
                     <img class="card-img-top" src="assets/images/Lando.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Lando</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary" id = "lando">Choose this Character</a>
+                          <p class="lando-hp">Health: 150</p>
+                          <p class="lando-ap">Attack: 70</p>
+                          <p class="lando-dp">Defense: 40</p>
+                        <a href="#" class="btn btn-primary lando-btn" id = "lando">Choose Character</a>
                     </div>
             </div>
+            
         </div>
-        <div class = "row" id = "attack">
-            <button type="button" class="btn btn-light">Attack</button>
+        <div class = "row">
+            <button type="button" class="btn btn-light" id = "attack">Attack</button>
+        </div>
+        <div class = "row" id = "fight-stats">
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Player Stats</h5>
+                        <p class="card-text" id = "user-stats"></p>
+                    </div>
+            </div>
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Enemy Stats</h5>
+                        <p class="card-text " id = "cpu-stats"></p>
+                    </div>
+            </div>
+
         </div>
     </div>
 
