@@ -15,10 +15,10 @@ defensePower: 0
 
 var enemy  = {
 name:"",
+id: "",
 health:"",
 attackPower:"",
-defensePower:""
-
+defensePower:"",
 }
 
 
@@ -202,10 +202,13 @@ enemy.defensePower = enemyCharacter.defensePower;
 console.log("Enemy Chosen: " + enemy.name);
 }
 
-var setPlayerStats = function(characterStat){
-    $("." + characterStat.id + "-hp").html("Health: " + player.health);
-    $("." + characterStat.id + "-ap").html("Attack: " + player.attackPower);
-    $("." + characterStat.id + "-dp").html("Defense: " + player.defensePower);
+var setPlayerStats = function(){
+    $("." + player.id + "-hp").html("Health: " + player.health);
+    $("." + player.id + "-ap").html("Attack: " + player.attackPower);
+    $("." + player.id + "-dp").html("Defense: " + player.defensePower);
+    $("." + enemy.id + "-hp").html("Health: " + enemy.health);
+    $("." + enemy.id + "-ap").html("Attack: " + enemy.attackPower);
+    $("." + enemy.id + "-dp").html("Defense: " + enemy.defensePower);
 
 }
 
@@ -327,7 +330,7 @@ var nowFighting  = function(){
         $("#attack").on("click", function(){
             enemy.health = enemy.health - player.attackPower - enemy.defensePower / 4;
             player.health = player.health - enemy.attackPower - player.defensePower / 4 ; 
-           // setPlayerStats(player.id);
+            setPlayerStats();
             console.log(player.id)
             console.log("enemy health " + enemy.health);
             console.log("player health: " + player.health)
@@ -342,14 +345,25 @@ var nowFighting  = function(){
                 //     $("body").hide()
                 enemySelected = false;
                 player.health = player.health + 200;
-                player.attackPower = player.attackPower * 1.8;
+                player.attackPower = player.attackPower * 1.15;
                 $(".card").show()
                 $(".btn").show()
                 $("#main-title").html("<h2> You won! Choose your next victim </h2>")
                 enemySelect()
+                enemyConverter()
+                
+                
             }
             if (player.health <=0 && enemy.health >0){
                 var again = confirm("You lost, would you like to try again")
+                if (again = true){
+                    location.reload();
+                } else {
+                    $("body").hide()
+                }
+            }
+            if (player.health && enemy.health <=0){
+                var again = confirm("You both died, would you like to try again")
                 if (again = true){
                     location.reload();
                 } else {
